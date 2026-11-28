@@ -5,11 +5,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><!-- TODO  --></title>
+    <title>SpaceX</title>
+    <!-- LIEN VERS TON FICHIER CSS (C'est ce qui manquait !) -->
+   <link rel="stylesheet" href="css/style.css" />
+   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   </head>
   <body>
     <div id="overlay"></div>
-    
+   
     <!-- Menu Pour Mobile -->
     <div id="mobile-menu" class="mobile-main-menu">
       <ul>
@@ -21,10 +24,20 @@
     <!-- Header et Menu-->
     <header class="main-header">
       <div class="logo">
-       <!-- TODO  -->
+        <!-- Chemin du logo corrigé (img/logo.png) -->
+        <img src="img/logo.png" alt="SpaceX Logo">
       </div>
       <nav class="desktop-main-menu">
-        <!-- TODO  -->
+        <ul class="nav-links">
+          <li><a href="#">FALCON-9</a></li>
+          <li><a href="#">FALCON-HEAVY</a></li>
+          <li><a href="#">DRAGON</a></li>
+          <li><a href="#">STARSHIP</a></li>
+          <li><a href="#">HUMAN SPACEFLIGHT</a></li>
+          <li><a href="#">RIDESHARE</a></li>
+          <li><a href="#">STARLINK</a></li>
+          <li><a href="#">SHOP</a></li>
+        </ul>
       </nav>
     </header>
 
@@ -38,20 +51,57 @@
     <!-- Section A -->
     <section class="section-a">
       <div class="section-inner">
-       <!-- TODO  -->
+        <h4>UPCOMING LAUNCH</h4>
+        <h2>CRS-25 MISSION</h2>
+        <a href="#" class="btn">
+          <span class="hover"></span>
+          <span>REWATCH</span>
+        </a>
       </div>
     </section>
 
-    
     <!-- Section B -->
     <section class="section-b">
       <div class="section-inner">
-       <!-- TODO  -->
+        <h4>RECENT LAUNCH</h4>
+        <h2>STARLINK MISSION</h2>
+        <a href="#" class="btn">
+          <span class="hover"></span>
+          <span>REWIND</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="login-section">
+      <div class="wrapper">
+        <form action="">
+          <h1>Login</h1>
+          <div class="input-box">
+            <input type="text" placeholder="Username" required>
+            <i class='bx bxs-lock'></i>
+          </div>
+          <div class="input-box">
+            <input type="password" placeholder="Password" required>
+            <i class='bx bxs-lock_alt'></i>
+          </div>
+          <div class="remember-forgot">
+            <label><input type="checkbox">Remember me</label>
+            <a href="#">Forgot password</a>
+          </div>
+          <button type="submit" class="btn-login">Login</button>
+          <div class="register-link">
+            <p>Don't have an account? <a href="#">Reggister</a></p>
+          </div>
+        </form>
       </div>
     </section>
 
     <footer>
-     <!-- TODO  -->
+      <ul>
+        <li>SpaceX &copy;2026</li>
+        <li><a href="#">PRIVACY POLICY</a></li>
+        <li><a href="#">SUPPLIERS</a></li>
+      </ul>
     </footer>
   </body>
 </html>
