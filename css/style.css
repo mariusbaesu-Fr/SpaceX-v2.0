@@ -9,9 +9,9 @@
 }
 
 body {
-  /* TODO 1 https://www.w3schools.com/cssref/pr_font_font-family.php */
+  font-family: 'Familjen Grotesk', sans-serif;
   background: #000;
-  /* TODO 2 https://www.w3schools.com/cssref/pr_text_color.php */
+  color: #fff;
 }
 
 a {
@@ -20,7 +20,7 @@ a {
 }
 
 ul {
-  /* TODO 3 https://www.w3schools.com/cssref/pr_list-style-type.php */
+  list-style: none;
 }
 
 /* Header/Navbar */
@@ -30,13 +30,8 @@ ul {
   left: 0;
   width: 100%;
   z-index: 3;
-
-  /* 
-  Madani
-  faire une vidéo d'explication sur flex et justify-contentles en utilisant W3school */
-  /* TODO 4 https://www.w3schools.com/css/css3_flexbox.asp */
-  /* TODO 5 https://www.w3schools.com/cssref/css3_pr_justify-content.php */
-
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   text-transform: uppercase;
   height: 100px;
@@ -45,8 +40,8 @@ ul {
 
 /* Logo */
 .logo {
-    /* TODO 6 https://www.w3schools.com/cssref/pr_dim_width.php */
-    height: auto; 
+  width: 210px;
+  height: auto; 
 }
 
 .logo img {
@@ -61,7 +56,7 @@ ul {
 }
 
 .desktop-main-menu ul {
- /* TODO 7 https://www.w3schools.com/css/css3_flexbox.asp  */
+  display: flex; 
 }
 
 .desktop-main-menu ul li {
@@ -97,7 +92,7 @@ section {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-   /* TODO 7 https://www.w3schools.com/cssref/pr_text_text-transform.php  */
+  text-transform: uppercase;
 }
 
 .section-inner {
@@ -119,23 +114,22 @@ section {
   font-weight: 700;
   margin-bottom: 20px;
   animation: fadeInUp 0.5s ease-in-out 0.2s;
-  animation-fill-mode: both; // Stop from showing at start
+  animation-fill-mode: both;
 }
 
 .section-inner a {
   animation: fadeInUp 0.5s ease-in-out 0.4s;
-  animation-fill-mode: both; // Stop from showing at start
+  animation-fill-mode: both;
 }
 
 /* Background images */
 .section-a {
- /* TODO 8 https://www.w3schools.com/cssref/pr_background-image.php */
+  background-image: url('../img/section-a.webp');
 }
 
 .section-b {
-  background-image: url('../img/section-d.webp');
+  background-image: url('../img/section-b.webp');
 }
-
 
 .btn {
   position: relative;
@@ -173,6 +167,114 @@ section {
   transform: translateY(0);
 }
 
+.login-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #000;
+}
+
+.wrapper {
+  width: 420px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  border-radius: 10px;
+  padding: 30px 40px;
+}
+
+.wrapper h1 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.wrapper .input-box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 30px 0;
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 40px;
+  font-size: 16px;
+  color: #fff;
+  padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder {
+  color: #fff;
+}
+
+.input-box i {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+
+.wrapper .remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14.5px;
+  margin: -15px 0 15px;
+}
+
+.remember-forgot label input {
+  accent-color: #fff;
+  margin-right: 3px;
+}
+
+.remember-forgot a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.remember-forgot a:hover {
+  text-decoration: underline;
+}
+
+.wrapper .btn-login {
+  width: 100%;
+  height: 45px;
+  background: #fff;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.wrapper .register-link {
+  font-size: 14.5px;
+  text-align: center;
+  margin: 20px 0 15px;
+}
+
+.register-link p a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.register-link p a:hover {
+  text-decoration: underline;
+}
 
 /* Footer */
 footer {
@@ -364,13 +466,11 @@ footer ul li a:hover {
 }
 
 /* Animations */
-
 @keyframes fadeInUp {
   0% {
     opacity: 0;
     transform: translateY(140px);
   }
-
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -381,7 +481,6 @@ footer ul li a:hover {
   0% {
     opacity: 0;
   }
-
   100% {
     opacity: 1;
   }
@@ -396,7 +495,6 @@ footer ul li a:hover {
     opacity: 0;
     transform: translateY(-20px);
   }
-
   40% {
     opacity: 1;
     transform: translateY(0);
@@ -404,14 +502,11 @@ footer ul li a:hover {
 }
 
 /* Media Queries */
-
 @media (max-width: 960px) {
-  /* Hide desktop menu */
   .desktop-main-menu {
     display: none;
   }
 
-  /* Show main mobile items */
   .mobile-only {
     display: block;
   }
@@ -451,7 +546,6 @@ footer ul li a:hover {
     font-size: 50px;
   }
 
-  /* Stats */
   .stats {
     flex-direction: column;
   }
